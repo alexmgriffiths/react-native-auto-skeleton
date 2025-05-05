@@ -19,7 +19,6 @@ buildscript {
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 
-
 def isNewArchitectureEnabled() {
   return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
 }
@@ -82,14 +81,20 @@ android {
   sourceSets {
     main {
       if (isNewArchitectureEnabled()) {
-        java.srcDirs += [
-                "src/newArch/java",
-                "generated/java",
-                "generated/jni"
-        ]
+        // java.srcDirs += [
+        //         "src/newArch/java",
+        //         "generated/java",
+        //         "generated/jni"
+        // ]
+        // java.srcDirs += ["src/newArch/java"]
+        // java.srcDirs += file("$buildDir/generated/source/codegen/java")
+        // java.srcDirs += file("$buildDir/generated/source/codegen/kotlin")
+        java.srcDirs += ["src/newArch/java"]
+        // include the codegen output inside the module
+        java.srcDirs += file("$projectDir/android/generated")
       } else {
         java.srcDirs += [
-                "src/oldArch/java"
+          "src/oldArch/java"
         ]
       }
     }

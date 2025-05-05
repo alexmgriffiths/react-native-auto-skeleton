@@ -71,14 +71,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pioner92/react-native-auto-skeleton.git"
+    "url": "git+https://github.com/alexmgriffiths/react-native-auto-skeleton.git"
   },
   "author": "pioner921227 <alex.shumihin921227@gmail.com> (https://github.com/pioner92)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pioner92/react-native-auto-skeleton/issues"
+    "url": "https://github.com/alexmgriffiths/react-native-auto-skeleton/issues"
   },
-  "homepage": "https://github.com/pioner92/react-native-auto-skeleton#readme",
+  "homepage": "https://github.com/alexmgriffiths/react-native-auto-skeleton#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -101,6 +101,7 @@
     "react": "19.0.0",
     "react-native": "0.78.1",
     "react-native-builder-bob": "^0.36.0",
+    "react-native-codegen": "^0.70.7",
     "release-it": "^17.10.0",
     "turbo": "^1.10.7",
     "typescript": "^5.2.2"
@@ -193,8 +194,8 @@
     ]
   },
   "codegenConfig": {
-    "name": "RNAutoSkeletonViewSpec",
-    "type": "all",
+    "name": "AutoSkeletonView",
+    "type": "components",
     "jsSrcsDir": "src",
     "outputDir": {
       "ios": "ios/generated",
